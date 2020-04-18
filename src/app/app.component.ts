@@ -5,12 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <!-- header -->
     <app-header></app-header>
-
-    <!-- routes will be rendered here -->
-    <router-outlet></router-outlet>
-
-    <!-- footer -->
-    <app-footer></app-footer>
+    <app-users-list></app-users-list>
   `,
   styles: []
 })

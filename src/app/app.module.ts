@@ -3,27 +3,28 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { UsersListComponent } from './core/components/header/users-list.component';
+import { UserService } from './core/services/user.service';
+import { FilterPipe } from './core/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ContactComponent
+    HeaderComponent,
+    UsersListComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CoreModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
